@@ -141,6 +141,7 @@
         width: 150px;
         height: 30px;
         color: black;
+        font-size: 1rem;
     }
     .search-bar {
         flex-direction: column;
@@ -153,6 +154,7 @@
     }
     .description {
         display: -webkit-box;
+        width: 90%;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 9;
         overflow-y: hidden;
