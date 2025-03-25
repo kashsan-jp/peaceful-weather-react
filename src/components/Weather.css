@@ -133,6 +133,7 @@
   @media (max-width:767px) {
     .weather {
         width: 90%;
+        height: 100%;
         font-size: 1.2rem
     }
     .search-bar {
