@@ -63,21 +63,22 @@ const Weather = () => {
             <h2>お天気アプリ</h2>
             <h1>天下泰平</h1>
         </div>
+        <div className='menu-box'>
+            <p>都市名を選んでください</p>
+            <select className="menu" value={value} onChange={handleSelect}>
+                {options.map(option => (
+                    <option key={option.id} value={option.value}>{option.label}</option>
+                ))}
+            </select>
+        </div>
+       
         
         <div className="search-bar">
             <p>都道府県都市コード</p>
-            <input ref={inputRef} type="text" className="text" placeholder='都市コードを入力' value={value} readOnly/>
+            <input ref={inputRef} type="text" className="text" placeholder='都道府県都市コード' value={value} />
             <img src={search_icon} alt="" onClick={() => search(inputRef.current.value)}/>
         </div>
 
-        <div className='menu-box'>
-        <select className="menu" value={value} onChange={handleSelect}>
-            {options.map(option => (
-                <option key={option.id} value={option.value}>{option.label}</option>
-            ))}
-        </select>
-       
-        </div>
 
         <img src={weatherData.icon} width={120} height={120}/>
 
