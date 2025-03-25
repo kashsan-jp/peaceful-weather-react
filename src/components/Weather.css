@@ -149,6 +149,8 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 9;
         overflow-y: hidden;
-}
+    }
+    .search-bar input{
+        width: 200px;
     }
   }
