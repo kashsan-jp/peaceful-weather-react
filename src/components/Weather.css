@@ -51,6 +51,7 @@
     color: "#626262";
     background: #ebfffc;
     font-size: 18px;
+    
 }
 .search-bar img{
     width: 40px;
@@ -157,7 +158,7 @@
         width: 90%;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 9;
-        overflow-y: hidden;
+        overflow-y: visible;
     }
     .search-bar input{
         width: 200px;
