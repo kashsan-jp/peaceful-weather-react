@@ -63,7 +63,8 @@
     margin-top: 1rem;
 }
 .menu {
-    width: 200px
+    width: 200px;
+    color: black;
 }
 .weather-icon {
     width: 160px;
@@ -135,6 +136,11 @@
         width: 90%;
         height: 100%;
         font-size: 1.2rem
+    }
+    .menu {
+        width: 150px;
+        height: 30px;
+        color: black;
     }
     .search-bar {
         flex-direction: column;
