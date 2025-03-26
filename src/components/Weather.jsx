@@ -48,6 +48,8 @@ const Weather = () => {
             { id:2, value: '230010', label: '名古屋' },
             { id:3, value: '270000', label: '大阪' },
             { id:4, value: '260010', label: '京都' },
+            { id:4, value: '016010', label: '札幌' },
+            { id:4, value: '471010', label: '那覇' },
           ];
     
     function handleSelect(event)  {
