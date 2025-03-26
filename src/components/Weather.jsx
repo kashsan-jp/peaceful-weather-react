@@ -3,8 +3,7 @@ import './Weather.css'
 import search_icon from '../assets/search.png'
 import temp_l_icon from '../assets/temp_l.png'
 import temp_h_icon from '../assets/temp_h.png'
-import Select from 'react-select/base'
-import SelectCity from './SelectCity'
+import flag from '../assets/flag.png'
 
 
 
@@ -45,8 +44,8 @@ const Weather = () => {
      const [value, setValue] = useState("")
     
         const options = [
-            { id:1, value: '180010', label: '福井' },
-            { id:2, value: '090010', label: '宇都宮' },
+            { id:1, value: '130010', label: '東京' },
+            { id:2, value: '230010', label: '名古屋' },
             { id:3, value: '270000', label: '大阪' },
             { id:4, value: '260010', label: '京都' },
           ];
@@ -59,26 +58,30 @@ const Weather = () => {
   return (
     <div className='weather'>
 
-        <div className='title'>
-            <h2>お天気アプリ</h2>
-            <h1>天下泰平</h1>
+        <div className='title-box'>
+            <img src={flag} alt="" />
+            <div className='title'>
+                <h2>お天気アプリ</h2>
+                <h1>天下泰平</h1>
+            </div>
         </div>
-        <div className='menu-box'>
-            <p>都市名を選んでください</p>
-            <select className="menu" value={value} onChange={handleSelect}>
-                {options.map(option => (
-                    <option key={option.id} value={option.value}>{option.label}</option>
-                ))}
-            </select>
-        </div>
-       
+        <div className="second-div">
+            <div className='menu-box'>
+                <p>都市名を選んで<br/>検索ボタンを押してください</p>
+                <select className="menu" value={value} onChange={handleSelect}>
+                    {options.map(option => (
+                        <option key={option.id} value={option.value}>{option.label}</option>
+                    ))}
+                </select>
+                <img src={search_icon} alt="" onClick={() => search(inputRef.current.value)}/>
+            </div>
         
-        <div className="search-bar">
-            <p>都道府県都市コード</p>
-            <input ref={inputRef} type="text" className="text" placeholder='都道府県都市コード' value={value} />
-            <img src={search_icon} alt="" onClick={() => search(inputRef.current.value)}/>
+            
+            <div className="search-bar">
+                <p>都道府県都市コード</p>
+                <input ref={inputRef} type="text" className="text" placeholder='都道府県都市コード' value={value} />
+            </div>
         </div>
-
 
         <img src={weatherData.icon} width={120} height={120}/>
 
